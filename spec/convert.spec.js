@@ -13,11 +13,16 @@ describe('Test des parametres de la fonction', function() {
 describe('Test resultats de la fonction', function() {
 	
 	it('doit convertir des USD dans les autres monnaies', function() {
-    
+        expect(convertisseur('USD', 10, 'EUR')).not.toBe(null);
+        expect(convertisseur('USD', 10, 'KRW')).not.toBe(null);
+        expect(convertisseur('USD', 10, 'NZD')).not.toBe(null);
+		
     });
     
     it('doit convertir des EUR dans les autres monnaies', function() {
-		
+        expect(convertisseur('EUR', 10, 'USD')).not.toBe(null);
+		expect(convertisseur('EUR', 10, 'KRW')).not.toBe(null);
+        expect(convertisseur('EUR', 10, 'NZD')).not.toBe(null);
     });
 
     it('doit convertir des KRW dans les autres monnaies', function() {
