@@ -26,11 +26,15 @@ describe('Test resultats de la fonction', function() {
     });
 
     it('doit convertir des KRW dans les autres monnaies', function() {
-		
+		expect(convertisseur('KRW', 10, 'EUR')).not.toBe(null);
+        expect(convertisseur('KRW', 10, 'USD')).not.toBe(null);
+        expect(convertisseur('KRW', 10, 'NZD')).not.toBe(null);
     });
 
     it('doit convertir des NZD dans les autres monnaies', function() {
-		
+		expect(convertisseur('NZD', 10, 'EUR')).not.toBe(null);
+        expect(convertisseur('NZD', 10, 'USD')).not.toBe(null);
+        expect(convertisseur('NZD', 10, 'KRW')).not.toBe(null);
     });
 
     it('ne doit pas convertir des mauvais montants', function() {
